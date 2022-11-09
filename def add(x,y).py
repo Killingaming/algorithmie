@@ -151,14 +151,30 @@ stringIntegerValue = str(342) # Renvoie "342" au lieu de 342
 #Exercice1
 #Faire une fonction qui concatene 2 chaines de caractere, les separants par une virgule 
 
+def concatWithComma(chaineA,chaineB):
+    stringifiedChaineA = str(chaineA)
+    stringifiedChaineB = str(chaineB)
+    return str(chaineA) + ", " + str(chaineB)
+
+correction
+#Definir une fonction qui concatene w/ chaineA et chaineB"""
+def concatene(chaineA,chaineB):
+"#qui retourne la concatenation de chaineA, une comma et enfin chaineB"
+    #je m'assure que cahineA soit bien de type str
+    #je m'assure que chaineB soit bien de type str
+    return str(chaineA) + ", " + str(chaineB)
+    #retourner chaineA concatene w/ un comma
+
+rework personnel
+def concatWithComma(chaineA,chaineB):
+    stringifiedChaineA = str(chaineA)
+    stringifiedChaineB = str(chaineB)
+    return stringifiedChaineA + ", " + stringifiedChaineB
 #Exercice2
 #Faire une fonction qui itere sur tous les index d'un tableau renvoyant une chaine de caractères
 #avec l'ensemble des occurations d'un chiffre e.g.:
 #Pour tableau = [0,1,1,1,0,1,1,0,1]
 #la fonction (tableau, 0) doit renvoyer "0,4,7" n'hesitez pas a implenter la première fonction ;)
-def concatene():
-integer
-
 
 tableauMultiType = ["Alexandre", true, tableau, 4 > 2, None]
 tableauDim = [0, 1, 2, 3]
@@ -183,11 +199,15 @@ listeUtilisateur = {
     "Toto":"12345"
     "JohnDoe":"azerty"
 }
+#ex4
 #Ecrivez la fonction login(userName, password, listUser) permettant d'afficher un message de connexion si
 #le combo user/password est bon
 
 def login(Michel,password,listeUtilisateur):
-    return 
+    if not in listeUtilisateur
+    print(false)
+    else: 
+        print(bravotuasreussi)
 
 
 
