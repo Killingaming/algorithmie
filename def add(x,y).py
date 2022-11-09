@@ -185,6 +185,53 @@ tableauMultiuDim[1][2] #Renvoie 21
 tableauCleVal = {"Cle" : "Valeur"}
 tableauCleVal["Cle"] #Renvoie  "Valeur"
 
+
+
+"correction classe"
+tableau = [0,1,1,1,0,1,1,0,1]
+#Definir une fonction qui prend une liste et une variable x quelconque
+def findIndexes(tableau,x):
+    "!!"#Initialiser i a 0!
+    i=0
+    #Definir chaineResultat en tant que string vide
+    chaineResultat=""
+    #!/On determine firstTurn a true\!
+    fristTurn = true
+    #Tant que i est inférieur a la longueur de tableau 
+    while i<len(tableau)
+        #Alors Si l'elt d'index i de tableau est egal a x
+        if tableau[i]==x:
+            #Alors
+            #SI je suis au premier tour ( si firstTurn est true )
+            if firstTurn == true:
+                #Alors j'assiggne str(i) a chaine resultat
+                chaineResultat = str(i)
+                #On passe firstTurn a false
+                firstTurn = false
+            #Sinon on assigne a chaine resultat le retour de concatWithComma(chaineResultat, str(i))
+            chaineResultat = concatWithComma(chaineResultat, str(i))
+        #On incremente i de 1
+        i=i+1
+    #Retourner chaineResultat
+
+
+
+re-work 10 minutes time
+#Definir une fonction qui prend une liste et une variable x quelconque
+def quelconque(tableau,x)
+"!!"#Initialiser i a 0!
+    i = 0
+    #Definir chaineResultat en tant que string vide
+    chaineResultat = ""
+    #Tant que i est inférieur a la longueur de tableau 
+    while i < len(tableau)
+        #Alors Si l'elt d'index i de tableau est egal a x
+        if elt == x
+        #Alors on assigne a chaine resultat le retour de concatWithComma(chaineResultat, str(i))
+        chaineResultat = concatWithComma(chaineResultat, str(elt))
+        i = i + 1
+    #renvoyer chaineResultat
+    return cahine
 #Exercice 3
 #"faire une fonction Afficher un message
 #Tel Que
@@ -193,21 +240,30 @@ def afficher(msg):
 
 
 
-listeUtilisateur = {
+listUser = {
     "Alexandre":"motdepasse"
     "Michel":"password"
     "Toto":"12345"
     "JohnDoe":"azerty"
 }
-#ex4
+#ex4 bonus
 #Ecrivez la fonction login(userName, password, listUser) permettant d'afficher un message de connexion si
 #le combo user/password est bon
 
-def login(Michel,password,listeUtilisateur):
-    if not in listeUtilisateur
-    print(false)
+def login(username,password,listUser):
+    #si le nom du username n'est pas dans listUser
+    if not in listUser
+    #écrire mauvais login
+    print(mauvais login)
+    #sinon
     else: 
+        #écrire bravotuasreussi
         print(bravotuasreussi)
+
+"correction classe noham"
+def login(username,mdp,listUser)
+#si le mdp de la cle usernameest le même que le mdp entré, alors bon login
+    if (mdp==liste)
 
 
 
