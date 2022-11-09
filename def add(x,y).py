@@ -172,6 +172,11 @@ tableauCleVal["Cle"] #Renvoie  "Valeur"
 #Exercice 3
 #"faire une fonction Afficher un message
 #Tel Que
+def afficher(msg):
+    print(msg)
+
+
+
 listeUtilisateur = {
     "Alexandre":"motdepasse"
     "Michel":"password"
@@ -180,6 +185,9 @@ listeUtilisateur = {
 }
 #Ecrivez la fonction login(userName, password, listUser) permettant d'afficher un message de connexion si
 #le combo user/password est bon
+
+def login(Michel,password,listeUtilisateur):
+    return 
 
 
 

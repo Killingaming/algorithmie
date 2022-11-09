@@ -9,7 +9,7 @@ assertion1pt2 = ( e * s < r) # > FALSE
 rE = 12500
 assertion1pt2 = (rE < r)
 #assertion1 === (assertion1pt1 == assertion1pt2)
-#assertion1 === (assertion1pt1 == false)
+#assertion1 === (assertion1t1 == false)
 #assertion1 === (true == false)
 
 print(assertion1) #!CECI est important il y a d'autre manière mais je voudrait que CELLE LA soit privilégié!
