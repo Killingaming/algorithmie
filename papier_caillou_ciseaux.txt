@@ -1,4 +1,0 @@
-// DEBUT 
-//On définit une table avec 3 éléments 
-
-// on admet une fonction random qui prendra aléatoirement ...
