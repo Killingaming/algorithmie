@@ -1,8 +1,7 @@
 DEBUT
 "A REMETTRE EN ORDRE!!" "les crochets sont pour créer des tableaux"
 # On définit une table "elements" avec 3 éléments : "papier"=0 "caillou"=1 "ciseaux"=2
-#on définit 
-#On définit les valeurs 0, 1 et 2
+#On 
 
 # on admet une fonction random qui donneras au hasard des valeurs entre 0 et 2
 
