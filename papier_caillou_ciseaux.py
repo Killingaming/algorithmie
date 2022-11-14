@@ -1,4 +1,4 @@
-DEBUT
+#DEBUT
 "A REMETTRE EN ORDRE!!" "les crochets sont pour créer des tableaux"
 # On définit une table "elements" avec 3 éléments : "papier"=0 "caillou"=1 "ciseaux"=2
 #On 
@@ -34,10 +34,9 @@ DEBUT
     #Sinon le joueur 1 
 
 
-"#On définit une fonction jeu qui permet de mettre le choix "
+#"On définit une fonction jeu qui permet de mettre le choix "
 
 
-input()
 
 
 papier = 0
