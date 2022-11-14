@@ -8,8 +8,8 @@
 
 #On définit la fonction jeu
     
-    "#On admet une fonction input qui récupère l'entrée d'un joueur quand on l'exécute (choixJoueur1) 
-    "rename" #Assigne a choixJoueur le retour de l'execution de la fonction input
+    #On admet une fonction input qui récupère l'entrée d'un joueur quand on l'exécute (choixJoueur1) 
+    #Assigne a choixJoueur le retour de l'execution de la fonction input
     #Si x est supérieur a 3
         #Alors j'affiche le message "Yoyoyo"
 
