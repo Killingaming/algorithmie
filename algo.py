@@ -1,4 +1,4 @@
-DEBUT
+#DEBUT
 r = 12000
 s = 1250
 e = 10
@@ -18,12 +18,11 @@ assertionDeux = (365 * 3) / (4 - (12 - 8)) * (rh) > r == (e * s < r)
 assertionDeuxPt1 = (((365 * 3) / (4 - (12 - 8))) * (rh) > r) # > FALSE (for some reasons)
 assertionDeuxPt2 = ( e * s < r) # > FALSE
 
-def calculPtDeux(){
+def calculPtDeux():
     return (e * s < r)
-}
 
 assertionDeux = (365 * 3) / (4 - (12 - 8)) * (rh) > r == calculPtDeux()
-FIN
+#FIN
 #camelCase
 #KebabCase
 #PascalCase
