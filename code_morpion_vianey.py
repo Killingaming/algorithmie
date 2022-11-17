@@ -36,8 +36,8 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
             else :
                 print("Player 2 wins !")
 
-    def draw(self):
-        print("That's a draw !")   
+    def draw(self):  #annonce une égalité
+        print("That's a draw !")   #écrivera sur le programme qu'une égalité à été faite
 
     def playerTurn(self):   #Les actions à faire du joueur 
         rowCoord=int(input("Please select a row number between 1 and 3 : "))-1
