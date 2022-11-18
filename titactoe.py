@@ -111,7 +111,7 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
         
 
     def ticTacToeGame(self):    #Le jeu commence 
-        takenCoords=[]   #on initialise takenCoords qui enregistrons  les coordonées dans une liste vide 
+        takenCoords=[]   #on définit takenCoords qui enregistre les coordonées prises durant la partie 
         continuing=True   
         if self._iaMode :
             while continuing : #tant que personne ne gagne
