@@ -47,7 +47,7 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
         assert rowCoord >= 0 and rowCoord <=2, "You're supposed to have chosen a number between 1 and 3..."
         colCoord=int(input("Please select a column number between 1 and 3 : "))-1
         assert colCoord >= 0 and colCoord <=2, "You're supposed to have chosen a number between 1 and 3..."
-        return (rowCoord, colCoord)  #retoune la ligne et la colonne du point
+        return (rowCoord, colCoord) #retoune la ligne et la colonne du point
 
     def botTurn(self) :   #Les actions à faire du bot
         botRowCoord=random.randint(0,2)   #le robot choisi une coordonnée horizontale aléatoire
@@ -56,9 +56,7 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
 
     def playerWin(self, player):
         win = None
-
         length = len(self._gamePlate)
-
         # on vérifie les lignes
         for i in range(length):
             win = True
@@ -79,7 +77,7 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
             if win:
                 return win
 
-        # con vérifie les diagonales
+        # on vérifie les diagonales
         win = True
         for i in range(length):
             if self._gamePlate[i][i] != player:

@@ -12,7 +12,7 @@
             
     #On définit la méthode affiche avec comme paramètre une liste content qui affichera le tableau du jeu en console
         # pour i allant de 0 à la longueur du tableau content -1
-            #On initialise la variable contentLine à une chaine de caractères vide
+            #On initialise la variable contentLine égale à une chaine de caractères vide
             #pour j allant de 0 à la longueur du tableau content -1
                 #On ajoute à contentLine la valeur de gamePlate de coordonnées (i,j)
                 #On ajoute à contentLine la chaine de caractères " | "
@@ -58,13 +58,66 @@
 
     #On définit la méthode botTurn qui ne prends pas de mparamètres, qui seras utile pour les actions à faire du bot
         #On définit la variable botRowCoord qui choisira au hasard un résultat entre 0 et 2
-        #On définit la variable 
+        #On définit la variable botColCoord qui choisira au hasard un résultat entre 0 et 2
+        #On retourne la ligne et la colonne du point
 
     #On définit la méthode playerWin qui prend un paramètre player et renvoie si ce dernier a gagné
         #On définit une variable win égale à None
         #On définit une variable length qui est égale à la longueur du tableau attribut gamePlate (le nombre de lignes)
-        #pour i allant de 0 à length-1 
-            #On indente win à True
-            #pour j allant de 0 à length-1 
+        
+        #On vérifie d'abord les lignes
+        #pour i allant de 0 à length-1 :
+            #On redéfinit win égaler  à True
+            #pour j allant de 0 à length-1 :
+                #si l'élement d'index (i,j) dans l'attribut tableau gamePlate est différent de player :
+                    #alors
+                    #On redéfinit win égal à False
+                    #La boucle s'arrête
+            #si win est égale à True :
+                #alors
+                #On retourne la valeur de win
+
+        #on vérifie ensuite les colonnes
+        # pour i allant de 0 à length -1 :  
+            #On redéfinit win égale à True 
+            #pour j allant de 0 à length -1 :
+                #si l'élement d'index (j,i) dans l'attribut tableau gamePlate est différent de player :
+                    #alors
+                    #On redéfinit win égal à False
+                    #La boucle s'arrête
+            #si win est égale à True :
+                # On retourne la valeur de win
+
+        #on vérifie les diagonales
+        #On redéfinit win égale à True
+        #pour i allant de 0 à lenght-1
+            #si l'élément d'index (i,i) dans l'attribut tableau gamePlate est différent de player :
+                #alors
+                #on redéfinit win égal à False
+                #la boucle s'arrête
+        #si win est True:
+            #On retourne la valeur de win
+        
+        #On redéfinit win égale à True
+        #pour i allant de 0 à length-1
+            #si l'élment d'index (i,lenght-1-i) dnas l'attribut tableau gamePlate est différent de player :
+                #on redéfinit win égal à False
+                #la boucle s'arrête
+        #si win est True:
+            #on retourne la valuer win
+        #on retourne False
+
+    
+    #On définit la méthode swapTurn qui prend un paramètre player et renvoie le joueur opposé
+        #On renvoie 'X' si player est égale à 'O' sinon on renvoie 'O'
+    
+    #On définit la méthode filledGamePlate qui ne prend pas de paramètre et vérifie si le tableau est complet ou non
+        #On définit la variable filled égale à True
+        #pour i allant de 0 à la longueur du tableau attribut gamePlate -1 :
+            #pour j allant de 0 à la longueur du tableau attribut gamePlate -1 :
+                 #si la valeur de coordonnées (i,j) dans gamePlate est égale à '*' :
+                    #alors
+                    #On i
+
 
 #FIN
