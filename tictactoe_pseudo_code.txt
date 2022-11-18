@@ -129,7 +129,7 @@
         #On définit une variable continuing égale à True
         #si l'attribut iaMode est égal à True :
             #alors
-            #tant que continuing est égale à True :
+            #On redéfinit continuing est égale à True :
                 #on définit l'attribut playerCoords en appelant la méthode playerTurn
                 #si l'élément de coordonnées playerCoords est différent de "*" et que dans le même temps playerCoords n'est pas dans takenCoords :
                     #alors 
@@ -168,29 +168,33 @@
                 #On redéfinit l'attribut pointOwner en appelant la méthode swapTurn avec en paramètre l'attribut pointOwner
                 
                 #on vérifie que la longueur de takenCoords est bien inférieure ou égale à 9, dans le cas contraire c'est qu'il y a une erreur interne
-
+                #si la méthode filledGamePlate renvoie True :
+                    #alors
+                    #On redéfinit continuing égale à False
+                    #On appelle la méthode draw sans paramètre
+                    #On arrête la boucle    
 
 
         #sinon :
-            #Tant que continuing est True:
+            #On redéfinit continuing est True:
                 #on définit l'attribut playerCoords en appelant la méthode playerTurn
                 #si l'élément de coordonnées (firstPlayerCoords[0],firstPlayerCoords[1]) "en inclusion les données 0 et 1"  dans l'attribut tableau gamePlate est différent de firstPlayerCoords dans takenCoords :
                     #On retourne qu'on ne peux pas choisir une case prise auparavant, essayez encore
                     #on redéfinit l'attribut playerCoords en appelant la méthode playerTurn
                 #sinon
-                    #On rajoute firstPlayerCoors à takenCoords
+                    #On rajoute firstPlayerCoords à takenCoords
                 
-                #On insère firstPlayerCoords[1] et le pointOwner à la liste gamePlate de tableau firstPlayerCoords[0]
-(a voir) --->   #on enlève et renvoie firstPlayerCoords[1]+1 
-                #On affiche le gamePlate
+                #on insère la valeur de l'attribut pointOwner à l'index de la deuxième coordonnée de l'attribut firstPlayerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de firstPlayerCoords
+                #on retire l'élément à l'index de la deuxième coordonnée +1 de l'attribut firstPlayerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de firstPlayerCoords
+                #on appelle la méthode affiche avec en paramètre l'attribut tableau gamePlate
 
                 #Si la méthode playerWin avec en paramètre pointOwner:
-                    #tant que continuing est égal à False
+                    #On redéfinit continuing est égal à False
                     #on appelle la méthode win avec paramètres pointOwner
                     #On arrête la boucle
 
                 #si la la méthode filledGamePlate sans paramètres:
-                    #tant que continuing est égal à False
+                    #On redéfinit continuing est égal à False
                     #on appelle la méthode draw sans paramètres
                     #On arrête la boucle
 
@@ -198,8 +202,28 @@
 
                 #On redéfinit secondPlayerCoords en appelant la méthode playerTurn sans paramètres
                 #si l'élément de coordonnées secondPlayerCoords est différent de "*" et que dans le même temps secondPlayerCoords n'est pas dans takenCoords :
+                    #On retourne qu'on ne peux pas choisir une case prise auparavant, essayez encore
+                    #on redéfinit secondPlayerCoords en appelant la méthode playerTurn sans paramètres
+                #sinon:
+                    #On rajoute secondPlayerCoords à takenCoords
+                    
+                #On insère secondPlayerCoords[1] et le pointOwner à la liste gamePlate de tableau secondPlayerCoords[0]
+(a voir) --->   #on enlève et renvoie secondPlayerCoords[1]+1 
+                #On affiche le gamePlate
 
+                #si la méthode playerWin avec comme paramètres pointOwner:
+                    #on redéfinit continuing est égal à False
+                    #la méthode win avec comme paramètres attributs pointOwner
+                    #on arrête la boucle
 
+                #si la méthode filledGamePlate sans paramètres:
+                    #on redéfinit continuing est égal à False 
+                    #la méthode draw sans paramètres
+                    #on arrête la boucle
+
+                #On redéfinit pointOwner en appelant swapTurn avec comme paramètres pointOwner
+                
+                
 
 
 #FIN
