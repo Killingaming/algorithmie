@@ -94,7 +94,7 @@
             #si l'élément d'index (i,i) dans l'attribut tableau gamePlate est différent de player :
                 #alors
                 #on redéfinit win égal à False
-                #la boucle s'arrête
+                #on arrête la boucle
         #si win est True:
             #On retourne la valeur de win
         
@@ -102,7 +102,8 @@
         #pour i allant de 0 à length-1
             #si l'élment d'index (i,lenght-1-i) dans l'attribut tableau gamePlate est différent de player :
                 #on redéfinit win égal à False
-                #la boucle s'arrête
+                #on arrête la boucle
+        
         #si win est True:
             #on retourne la valuer win
         #on retourne False
@@ -118,7 +119,7 @@
                 #si la valeur de coordonnées (i,j) dans gamePlate est égale à '*' :
                     #alors
                     #On redéfinit filled égale à False
-                    #La boucle s'arrête
+                    #on arrête la boucle
         #si filled est True
             #on retourne la valeur de filled
         #on retourne False
@@ -136,9 +137,40 @@
                     #on redéfinit playerCoords en appelant la méthode playerTurn
                 #sinon :
                     #alors
-                    #
+                    #on ajoute playerCoords à la fin de takenCoords
+                #on insère "X" à l'index de la deuxième coordonnée de l'attribut playerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de playerCoords
+                #on retire l'élément à l'index de la deuxième coordonnée +1 de l'attribut playerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de playerCoords
+                #on appelle la méthode affiche avec en paramètre l'attribut tableau gamePlate
 
-        
+                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :>
+                    #alors
+                    #On redéfinit continuing à False
+                    #On appelle la méthode win avec comme paramètre l'attribut pointOwner
+                    #On arrête la boucle
+                #On redéfinit l'attribut pointOwner en appelant la méthode swapTurn avec en paramètre l'attribut pointOwner
+                
+                #On définit l'attribut botCoords en appelant la méthode botTurn
+                #tant que les coordonnées botCoords sont différentes de "*" dans l'attribut tableau gamePlate :
+                    #alors
+                    #On redéfinit lattribut botCoords en appelant la méthode botTurn
+                #On ajoute l'attribut botCoords à la fin du tableau takenCoords
+                
+                #On renvoie en console les coordonnées où l'IA a joué
+                #on insère "O" à l'index de la deuxième coordonnée de l'attribut botCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de botCoords
+                #on retire l'élément à l'index de la deuxième coordonnée +1 de l'attribut botCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de botCoords
+                #on appelle la méthode affiche avec en paramètre l'attribut tableau gamePlate
+
+                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :>
+                    #alors
+                    #On redéfinit continuing à False
+                    #On appelle la méthode win avec comme paramètre l'attribut pointOwner
+                    #On arrête la boucle
+                #On redéfinit l'attribut pointOwner en appelant la méthode swapTurn avec en paramètre l'attribut pointOwner
+                
+                #on vérifie que la longueur de takenCoords est bien inférieure ou égale à 9, dans le cas contraire c'est qu'il y a une erreur interne
+
+
+
         #sinon :
             #Tant que continuing est True:
                 #on définit l'attribut playerCoords en appelant la méthode playerTurn
@@ -148,7 +180,26 @@
                 #sinon
                     #On rajoute firstPlayerCoors à takenCoords
                 
-                #self.gamePlate[self._firstPlayerCoords[0]].insert(self._firstPlayerCoords[1],self._pointOwner)
+                #On insère firstPlayerCoords[1] et le pointOwner à la liste gamePlate de tableau firstPlayerCoords[0]
+(a voir) --->   #on enlève et renvoie firstPlayerCoords[1]+1 
+                #On affiche le gamePlate
+
+                #Si la méthode playerWin avec en paramètre pointOwner:
+                    #tant que continuing est égal à False
+                    #on appelle la méthode win avec paramètres pointOwner
+                    #On arrête la boucle
+
+                #si la la méthode filledGamePlate sans paramètres:
+                    #tant que continuing est égal à False
+                    #on appelle la méthode draw sans paramètres
+                    #On arrête la boucle
+
+                #On redéfinit l'attribut pointOwner en appelant la méthode swapTurn avec en paramètre l'attribut pointOwner
+
+                #On redéfinit secondPlayerCoords en appelant la méthode playerTurn sans paramètres
+                #si l'élément de coordonnées secondPlayerCoords est différent de "*" et que dans le même temps secondPlayerCoords n'est pas dans takenCoords :
+
+
 
 
 #FIN

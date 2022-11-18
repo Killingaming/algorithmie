@@ -125,6 +125,7 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
                 
                 self._gamePlate[self._playerCoords[0]].insert(self._playerCoords[1],"X")    
                 self._gamePlate[self._playerCoords[0]].pop(self._playerCoords[1]+1)
+                self.affiche(self._gamePlate)
                 
                 if self.playerWin(self._pointOwner) :
                         continuing = False
@@ -135,14 +136,12 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
                 self._botCoords=self.botTurn()
                 while self._gamePlate[self._botCoords[0]][self._botCoords[1]] != "*" :
                     self._botCoords=self.botTurn()
-                #else :
                 takenCoords.append(self._botCoords)
                 
                 print("AI played ",(self._botCoords[0]+1,self._botCoords[1]+1))
                 
                 self._gamePlate[self._botCoords[0]].insert(self._botCoords[1],"O")
                 self._gamePlate[self._botCoords[0]].pop(self._botCoords[1]+1)
-                print(self._gamePlate)
                 self.affiche(self._gamePlate)
                  
                 if self.playerWin(self._pointOwner) :
@@ -183,6 +182,7 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
 
                 self._pointOwner=self.swapTurn(self._pointOwner)
 
+                
                 self._secondPlayerCoords=self.playerTurn()
                 if self._gamePlate[self._secondPlayerCoords[0]][self._secondPlayerCoords[1]] != "*" and self._secondPlayerCoords in takenCoords:
                     print("You cannot pick this used space... try again")
@@ -193,10 +193,7 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
                 self._gamePlate[self._secondPlayerCoords[0]].insert(self._secondPlayerCoords[1],self._pointOwner)    
                 self._gamePlate[self._secondPlayerCoords[0]].pop(self._secondPlayerCoords[1]+1)
                 self.affiche(self._gamePlate)
-
                 
-                
-                print(self._gamePlate)
                 if self.playerWin(self._pointOwner) :
                     continuing = False
                     self.win(self._pointOwner)
