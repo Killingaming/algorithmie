@@ -217,4 +217,4 @@ class TicTacToe (object):  #création de la class TicTacToe de type object
 
 game=TicTacToe()
 game.ticTacToeStart()
-game.ticTacToeGame()
+game.ticTacToeGame(

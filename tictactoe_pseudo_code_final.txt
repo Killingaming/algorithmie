@@ -3,9 +3,11 @@
 #On crée la classe objet TicTacToe   
     
     #On définit une surcharge de la méthode constructeur __init__ avec comme paramètre un booléen secondPlayer qui atteste de la présence (ou non) d'un deuxième joueur 
-        #s'il y a un second joueur
+        #s'il y a un second joueur :
+            #alors
             #Pas de présence d'une IA
-        #sinon, il n'y a qu'un seul joueur
+        #sinon (il n'y a qu'un seul joueur) :
+            #alors
             #on indique la présence d'une IA
         #Initialisation du tableau de jeu (vide) gamePlate, attribut de l'objet TicTacToe
         #Initialisation du pointOwner pour le premier joueur, attribut de l'objet TicTacToe (on part du principe qu'en Player VS IA le joueur commence)
@@ -22,7 +24,7 @@
         #pour i allant de 0 à 2 
             #on ajoute un tableau vide à la fin de l'attribut gamePlate
             #pour une variable quelconque allant de 0 à 2
-                #On rajoute un caractère dans le tableau d'index i, montrant la case n
+                #On rajoute "*" dans le tableau d'index i de l'attribut gamePlate
         #on affiche le gamePlate
     
     #On définit la méthode win avec comme paramètre pointOwner qui annonce le vainqueur de la partie et prend comme paramètre la chaine de caractères pointOwner (qui vaut "X" ou "O")
@@ -54,12 +56,12 @@
         #On vérifie que rowCoord est supérieure ou égale à 0 et dans le même temps inférieure ou égale à 2, si ce n'est pas le cas on renvoie un message expliquant l'origine de l'erreur
         #On définit la variable colCoord qui est le résultat entier d'un input qui demande au joueur un nombre entre 1 et 3, nombre auquel on retire 1 (pour les index)
         #On vérifie que colCoord est supérieure ou égale à 0 et dans le même temps inférieure ou égale à 2, si ce n'est pas le cas on renvoie un message expliquant l'origine de l'erreur
-        #On retourne le tuple contenant rowCoord et colCoord
+        #On retourne le tuple comoposé de rowCoord et colCoord
 
     #On définit la méthode botTurn qui ne prends pas de mparamètres, qui seras utile pour les actions à faire du bot
         #On définit la variable botRowCoord qui choisira au hasard un résultat entre 0 et 2
         #On définit la variable botColCoord qui choisira au hasard un résultat entre 0 et 2
-        #On retourne la ligne et la colonne du point
+        #On retourne le tuple composé de botRowCoord et botColCoord
 
     #On définit la méthode playerWin qui prend un paramètre player et renvoie si ce dernier a gagné
         #On définit une variable win égale à None
@@ -73,7 +75,7 @@
                     #alors
                     #On redéfinit win égal à False
                     #La boucle s'arrête
-            #si win est égale à True :
+            #si win est égal à True :
                 #alors
                 #On retourne la valeur de win
 
@@ -85,22 +87,23 @@
                     #alors
                     #On redéfinit win égal à False
                     #La boucle s'arrête
-            #si win est égale à True :
+            #si win est égal à True :
                 # On retourne la valeur de win
 
         #on vérifie les diagonales
         #On redéfinit win égale à True
-        #pour i allant de 0 à lenght-1
+        #pour i allant de 0 à lenght-1 :
             #si l'élément d'index (i,i) dans l'attribut tableau gamePlate est différent de player :
                 #alors
                 #on redéfinit win égal à False
                 #on arrête la boucle
-        #si win est True:
+        #si win est égal à True:
             #On retourne la valeur de win
         
         #On redéfinit win égale à True
-        #pour i allant de 0 à length-1
+        #pour i allant de 0 à length-1 :
             #si l'élment d'index (i,lenght-1-i) dans l'attribut tableau gamePlate est différent de player :
+                #alors
                 #on redéfinit win égal à False
                 #on arrête la boucle
         
@@ -131,7 +134,7 @@
             #alors
             #On redéfinit continuing est égale à True :
                 #on définit l'attribut playerCoords en appelant la méthode playerTurn
-                #si l'élément de coordonnées playerCoords est différent de "*" et que dans le même temps playerCoords n'est pas dans takenCoords :
+                #si l'élément de coordonnées playerCoords est différent de "*" dans gamePlate et que dans le même temps playerCoords n'est pas dans takenCoords :
                     #alors 
                     #on renvoie en console qu'il n'est pas possible de prendre une coordonnée déjà prise, il faut donc recommencer
                     #on redéfinit playerCoords en appelant la méthode playerTurn
@@ -142,7 +145,7 @@
                 #on retire l'élément à l'index de la deuxième coordonnée +1 de l'attribut playerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de playerCoords
                 #on appelle la méthode affiche avec en paramètre l'attribut tableau gamePlate
 
-                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :>
+                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :
                     #alors
                     #On redéfinit continuing à False
                     #On appelle la méthode win avec comme paramètre l'attribut pointOwner
@@ -150,9 +153,9 @@
                 #On redéfinit l'attribut pointOwner en appelant la méthode swapTurn avec en paramètre l'attribut pointOwner
                 
                 #On définit l'attribut botCoords en appelant la méthode botTurn
-                #tant que les coordonnées botCoords sont différentes de "*" dans l'attribut tableau gamePlate :
+                #tant que l'élement de coordonnées botCoords est différent de "*" dans gamePlate :
                     #alors
-                    #On redéfinit lattribut botCoords en appelant la méthode botTurn
+                    #On redéfinit l'attribut botCoords en appelant la méthode botTurn
                 #On ajoute l'attribut botCoords à la fin du tableau takenCoords
                 
                 #On renvoie en console les coordonnées où l'IA a joué
@@ -160,7 +163,7 @@
                 #on retire l'élément à l'index de la deuxième coordonnée +1 de l'attribut botCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de botCoords
                 #on appelle la méthode affiche avec en paramètre l'attribut tableau gamePlate
 
-                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :>
+                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :
                     #alors
                     #On redéfinit continuing à False
                     #On appelle la méthode win avec comme paramètre l'attribut pointOwner
@@ -178,8 +181,8 @@
         #sinon :
             #On redéfinit continuing est True:
                 #on définit l'attribut playerCoords en appelant la méthode playerTurn
-                #si l'élément de coordonnées (firstPlayerCoords[0],firstPlayerCoords[1]) "en inclusion les données 0 et 1"  dans l'attribut tableau gamePlate est différent de firstPlayerCoords dans takenCoords :
-                    #On retourne qu'on ne peux pas choisir une case prise auparavant, essayez encore
+                #si l'élément de coordonnées firstPlayerCoords est différent de "*" dans gamePlate et que dans le même temps playerCoords n'est pas dans takenCoords :
+                    #on renvoie en console qu'il n'est pas possible de prendre une coordonnée déjà prise, il faut donc recommencer
                     #on redéfinit l'attribut playerCoords en appelant la méthode playerTurn
                 #sinon
                     #On rajoute firstPlayerCoords à takenCoords
@@ -188,42 +191,44 @@
                 #on retire l'élément à l'index de la deuxième coordonnée +1 de l'attribut firstPlayerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de firstPlayerCoords
                 #on appelle la méthode affiche avec en paramètre l'attribut tableau gamePlate
 
-                #Si la méthode playerWin avec en paramètre pointOwner:
-                    #On redéfinit continuing est égal à False
-                    #on appelle la méthode win avec paramètres pointOwner
+                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :
+                    #On redéfinit continuing égal à False
+                    #on appelle la méthode win avec comme paramètre l'attribut pointOwner
                     #On arrête la boucle
 
-                #si la la méthode filledGamePlate sans paramètres:
-                    #On redéfinit continuing est égal à False
-                    #on appelle la méthode draw sans paramètres
+                #si la méthode filledGamePlate est égale à True:
+                    #On redéfinit continuing égal à False
+                    #on appelle la méthode draw
                     #On arrête la boucle
 
                 #On redéfinit l'attribut pointOwner en appelant la méthode swapTurn avec en paramètre l'attribut pointOwner
 
-                #On redéfinit secondPlayerCoords en appelant la méthode playerTurn sans paramètres
-                #si l'élément de coordonnées secondPlayerCoords est différent de "*" et que dans le même temps secondPlayerCoords n'est pas dans takenCoords :
-                    #On retourne qu'on ne peux pas choisir une case prise auparavant, essayez encore
-                    #on redéfinit secondPlayerCoords en appelant la méthode playerTurn sans paramètres
+                #On redéfinit secondPlayerCoords en appelant la méthode playerTurn
+                #si l'élément de coordonnées secondPlayerCoords est différent de "*" dans gamePlate et que dans le même temps secondPlayerCoords n'est pas dans takenCoords :
+                    #on renvoie en console qu'il n'est pas possible de prendre une coordonnée déjà prise, il faut donc recommencer
+                    #on redéfinit secondPlayerCoords en appelant la méthode playerTurn
                 #sinon:
                     #On rajoute secondPlayerCoords à takenCoords
                     
-                #On insère secondPlayerCoords[1] et le pointOwner à la liste gamePlate de tableau secondPlayerCoords[0]
-(a voir) --->   #on enlève et renvoie secondPlayerCoords[1]+1 
-                #On affiche le gamePlate
+                #on insère la valeur de l'attribut pointOwner à l'index de la deuxième coordonnée de l'attribut secondPlayerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de secondPlayerCoords
+                #on retire l'élément à l'index de la deuxième coordonnée +1 de l'attribut secondPlayerCoords dans le tableau du tableau gamePlate qui est à l'index de la première coordonnée de secondPlayerCoords
+                #on appelle la méthode affiche avec en paramètre l'attribut tableau gamePlate
 
-                #si la méthode playerWin avec comme paramètres pointOwner:
+                #Si la méthode playerWin avec en paramètre l'attribut pointOwner est égale à True :
                     #on redéfinit continuing est égal à False
-                    #la méthode win avec comme paramètres attributs pointOwner
+                    #on appelle la méthode win avec comme paramètre l'attribut pointOwner
                     #on arrête la boucle
 
-                #si la méthode filledGamePlate sans paramètres:
-                    #on redéfinit continuing est égal à False 
-                    #la méthode draw sans paramètres
+                #si la méthode filledGamePlate sest égale à True:
+                    #on redéfinit continuing égal à False 
+                    #on appelle la méthode draw
                     #on arrête la boucle
 
                 #On redéfinit pointOwner en appelant swapTurn avec comme paramètres pointOwner
                 
                 
-
+#on définit une variable morpion égale à un objet TicTacToe avec True en paramètre (une partie de joueur contre joueur)
+#on applique la méthode ticTacToeStart à morpion (initialiser le tableau de jeu)
+#on applique la méthode ticTacToeGame à morpion (démarrer la partie)
 
 #FIN
